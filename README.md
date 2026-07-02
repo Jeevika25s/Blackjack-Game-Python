@@ -150,10 +150,8 @@ Through this project, I learned:
 
 ## 👩‍💻 Author
 
-**Jeevika Selvam**
+**Jeevika S**
 
 GitHub: https://github.com/Jeevika25s
 
 ---
-
-⭐ If you found this project helpful, consider giving it a star!
