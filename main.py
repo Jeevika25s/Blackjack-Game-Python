@@ -1,23 +1,18 @@
-from deck import Deck
-from hand import Hand
-from functions import show_some, show_all
+from chips import Chips
+from functions import player_wins, dealer_wins, player_busts, dealer_busts, push
 
-deck = Deck()
-deck.shuffle()
+chips = Chips()
 
-player = Hand()
-dealer = Hand()
+chips.bet = 20
 
-# Deal two cards to player
-player.add_card(deck.deal_one())
-player.add_card(deck.deal_one())
+print("Starting Chips:", chips.total)
 
-# Deal two cards to dealer
-dealer.add_card(deck.deal_one())
-dealer.add_card(deck.deal_one())
+player_wins(None, chips)
 
-print("Showing Some Cards")
-show_some(player, dealer)
+print("After Win:", chips.total)
 
-print("\nShowing All Cards")
-show_all(player, dealer)
+dealer_wins(None, chips)
+
+print("After Loss:", chips.total)
+
+push(None)

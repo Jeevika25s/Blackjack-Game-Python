@@ -68,3 +68,25 @@ def show_all(player, dealer):
 
     print("Player's Value:", player.value)
     print("--------------------------------")
+def player_busts(player, chips):
+    print("\nPlayer Busts!")
+    chips.lose_bet()
+
+
+def player_wins(player, chips):
+    print("\nPlayer Wins!")
+    chips.win_bet()
+
+
+def dealer_busts(player, chips):
+    print("\nDealer Busts!")
+    chips.win_bet()
+
+
+def dealer_wins(player, chips):
+    print("\nDealer Wins!")
+    chips.lose_bet()
+
+
+def push(player):
+    print("\nIt's a Tie!")
