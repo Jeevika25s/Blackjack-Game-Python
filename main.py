@@ -1,7 +1,15 @@
-from card import Card
+from deck import Deck
 
-card1 = Card("Hearts", "Ace")
-card2 = Card("Spades", "King")
+deck = Deck()
 
-print(card1)
-print(card2)
+print("Number of cards:", len(deck.all_cards))
+
+
+deck.shuffle()
+
+card = deck.deal_one()
+
+print("\nCard dealt:")
+print(card)
+
+print("\nCards remaining:", len(deck.all_cards))
