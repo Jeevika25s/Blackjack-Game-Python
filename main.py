@@ -1,17 +1,10 @@
 from chips import Chips
+from functions import take_bet
 
 player = Chips()
 
-print("Starting Chips:", player.total)
+print("Total Chips:", player.total)
 
-player.bet = 25
+take_bet(player)
 
-player.win_bet()
-
-print("After Winning:", player.total)
-
-player.bet = 40
-
-player.lose_bet()
-
-print("After Losing:", player.total)
+print("Bet Placed:", player.bet)
