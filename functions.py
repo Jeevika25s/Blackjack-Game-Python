@@ -40,3 +40,31 @@ def hit_or_stand(deck, hand):
 
         else:
             print("Invalid input. Please enter h or s.")
+def show_some(player, dealer):
+    print("\n--------------------------------")
+    print("Dealer's Hand:")
+    print("<card hidden>")
+    print(dealer.cards[1])
+
+    print("\nPlayer's Hand:")
+    for card in player.cards:
+        print(card)
+
+    print("Player's Value:", player.value)
+    print("--------------------------------")
+
+
+def show_all(player, dealer):
+    print("\n--------------------------------")
+    print("Dealer's Hand:")
+    for card in dealer.cards:
+        print(card)
+
+    print("Dealer's Value:", dealer.value)
+
+    print("\nPlayer's Hand:")
+    for card in player.cards:
+        print(card)
+
+    print("Player's Value:", player.value)
+    print("--------------------------------")

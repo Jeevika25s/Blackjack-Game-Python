@@ -1,28 +1,23 @@
 from deck import Deck
 from hand import Hand
-from functions import hit
+from functions import show_some, show_all
 
 deck = Deck()
 deck.shuffle()
 
-player_hand = Hand()
+player = Hand()
+dealer = Hand()
 
-# Give two cards
-player_hand.add_card(deck.deal_one())
-player_hand.add_card(deck.deal_one())
+# Deal two cards to player
+player.add_card(deck.deal_one())
+player.add_card(deck.deal_one())
 
-print("Player Cards:")
-for card in player_hand.cards:
-    print(card)
+# Deal two cards to dealer
+dealer.add_card(deck.deal_one())
+dealer.add_card(deck.deal_one())
 
-print("Value:", player_hand.value)
+print("Showing Some Cards")
+show_some(player, dealer)
 
-print("\nGiving one more card...\n")
-
-hit(deck, player_hand)
-
-print("Updated Cards:")
-for card in player_hand.cards:
-    print(card)
-
-print("New Value:", player_hand.value)
+print("\nShowing All Cards")
+show_all(player, dealer)
