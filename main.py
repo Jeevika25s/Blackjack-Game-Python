@@ -1,22 +1,17 @@
-from deck import Deck
-from hand import Hand
+from chips import Chips
 
-# Create and shuffle the deck
-deck = Deck()
-deck.shuffle()
+player = Chips()
 
-# Create a player's hand
-player_hand = Hand()
+print("Starting Chips:", player.total)
 
-# Deal two cards
-player_hand.add_card(deck.deal_one())
-player_hand.add_card(deck.deal_one())
+player.bet = 25
 
-# Adjust Ace if needed
-player_hand.adjust_for_ace()
+player.win_bet()
 
-print("Player's Cards:")
-for card in player_hand.cards:
-    print(card)
+print("After Winning:", player.total)
 
-print("\nHand Value:", player_hand.value)
+player.bet = 40
+
+player.lose_bet()
+
+print("After Losing:", player.total)
