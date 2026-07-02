@@ -1,15 +1,22 @@
 from deck import Deck
+from hand import Hand
 
+# Create and shuffle the deck
 deck = Deck()
-
-print("Number of cards:", len(deck.all_cards))
-
-
 deck.shuffle()
 
-card = deck.deal_one()
+# Create a player's hand
+player_hand = Hand()
 
-print("\nCard dealt:")
-print(card)
+# Deal two cards
+player_hand.add_card(deck.deal_one())
+player_hand.add_card(deck.deal_one())
 
-print("\nCards remaining:", len(deck.all_cards))
+# Adjust Ace if needed
+player_hand.adjust_for_ace()
+
+print("Player's Cards:")
+for card in player_hand.cards:
+    print(card)
+
+print("\nHand Value:", player_hand.value)
